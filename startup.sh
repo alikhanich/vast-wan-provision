@@ -53,7 +53,8 @@ UNET_MODELS=(
 LORA_MODELS=(
   "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors"
   "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors"
-  "https://civitai.com/api/download/models/2115311?type=Model&format=Diffusers"
+  "https://civitai.com/api/download/models/2115311?type=Model&format=Diffusers" # instagirl
+  "https://civitai.com/api/download/models/2124694?type=Model&format=Diffusers" # instareal
 )
 
 VAE_MODELS=(
