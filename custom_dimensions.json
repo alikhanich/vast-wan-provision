@@ -1,0 +1,46 @@
+[
+    {
+        "label": "720p Square",
+        "value": "720x720"
+    },
+    {
+        "label": "720p Horitzontal",
+        "value": "1280x720"
+    },
+    {
+        "label": "720p Vertical",
+        "value": "720x1280"
+    },
+    {
+        "label": "1080p Square",
+        "value": "1080x1080"
+    },
+    {
+        "label": "1080p Horitzontal",
+        "value": "1920x1080"
+    },
+    {
+        "label": "1080p Vertical",
+        "value": "1080x1920"
+    },
+    {
+        "label": "Custom 1",
+        "value": "1024x720"
+    },
+    {
+        "label": "Custom 2",
+        "value": "1376x720"
+    },
+    {
+        "label": "Custom 3",
+        "value": "1600x1200"
+    },
+    {
+        "label": "Custom 4",
+        "value": "1920x1536"
+    },
+    {
+        "label": "1920p Square",
+        "value": "1920x1920"
+    }
+]
