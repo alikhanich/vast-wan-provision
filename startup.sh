@@ -3,8 +3,11 @@
 source /venv/main/bin/activate
 COMFYUI_DIR=${WORKSPACE}/ComfyUI
 
-# Packages are installed after nodes so we can fix them...
 
+git clone https://github.com/thu-ml/SageAttention.git
+cd SageAttention  &&  export EXT_PARALLEL=4 NVCC_APPEND_FLAGS="--threads 8" MAX_JOBS=32 && python setup.py install
+cd -
+# Packages are installed after nodes so we can fix them...
 APT_PACKAGES=(
     #"package-1"
     #"package-2"
