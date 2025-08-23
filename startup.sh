@@ -30,6 +30,7 @@ NODES=(
     "https://github.com/ClownsharkBatwing/RES4LYF"
     "https://github.com/ltdrdata/was-node-suite-comfyui"
     "https://github.com/yolain/ComfyUI-Easy-Use"
+    "https://github.com/rgthree/rgthree-comfy"
 )
 
 WORKFLOWS=(
@@ -51,6 +52,7 @@ CLIP_MODELS=(
     #"https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
     "https://huggingface.co/Kijai/WanVideo_comfy/blob/main/umt5-xxl-enc-bf16.safetensors"
     "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors"
+
 )
 
 UNET_MODELS=(
