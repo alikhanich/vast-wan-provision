@@ -9,8 +9,8 @@ cd SageAttention  &&  export EXT_PARALLEL=4 NVCC_APPEND_FLAGS="--threads 8" MAX_
 cd -
 # Packages are installed after nodes so we can fix them...
 APT_PACKAGES=(
-    #"package-1"
-    #"package-2"
+    zip
+    unzip
 )
 
 PIP_PACKAGES=(
@@ -183,6 +183,14 @@ function provisioning_get_files() {
         provisioning_download "${url}" "${dir}"
         printf "\n"
     done
+    cd $dir
+    for file in *; do
+        if [[ "$file" == *.zip ]]; then
+            echo "Unzipping: $file"
+            unzip -o "$file"
+        fi
+    done
+    cd -
 }
 
 function provisioning_print_header() {
