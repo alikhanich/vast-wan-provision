@@ -31,6 +31,7 @@ NODES=(
     "https://github.com/ltdrdata/was-node-suite-comfyui"
     "https://github.com/yolain/ComfyUI-Easy-Use"
     "https://github.com/rgthree/rgthree-comfy"
+    "https://github.com/ShmuelRonen/ComfyUI-VideoUpscale_WithModel"
 )
 
 WORKFLOWS=(
@@ -99,9 +100,6 @@ function provisioning_start() {
         "${COMFYUI_DIR}/input" \
         "${INPUT[@]}"
     provisioning_get_files \
-        "${COMFYUI_DIR}/models/diffusion" \
-        "${DIFFUSION_MODELS[@]}"
-    provisioning_get_files \
         "${COMFYUI_DIR}/models/checkpoints" \
         "${CHECKPOINT_MODELS[@]}"
     provisioning_get_files \
@@ -122,6 +120,9 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/diffusion" \
+        "${DIFFUSION_MODELS[@]}"
     provisioning_print_end
 }
 
