@@ -20,11 +20,16 @@ PIP_PACKAGES=(
 
 NODES=(
     "https://github.com/Lightricks/ComfyUI-LTXVideo"
+    "https://github.com/kijai/ComfyUI-WanVideoWrapper"
     "https://github.com/kijai/ComfyUI-KJNodes"
     "https://github.com/aria1th/ComfyUI-LogicUtils"
     "https://github.com/Mattabyte/ComfyUI-LTXVideo-Registry_Mattabyte"
     "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
     "https://github.com/city96/ComfyUI-GGUF"
+    "https://github.com/welltop-cn/ComfyUI-TeaCache"
+    "https://github.com/ClownsharkBatwing/RES4LYF"
+    "https://github.com/ltdrdata/was-node-suite-comfyui"
+    "https://github.com/yolain/ComfyUI-Easy-Use"
 )
 
 WORKFLOWS=(
@@ -37,33 +42,40 @@ INPUT=(
 )
 
 CHECKPOINT_MODELS=(
-    "https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltx-video-2b-v0.9.5.safetensors"
-    "https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.7-distilled-fp8.safetensors"
+    # "https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltx-video-2b-v0.9.5.safetensors"
+    # "https://huggingface.co/Lightricks/LTX-Video/resolve/main/ltxv-13b-0.9.7-distilled-fp8.safetensors"
 )
 
 CLIP_MODELS=(
-    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+    #"https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp16.safetensors"
+    "https://huggingface.co/Kijai/WanVideo_comfy/blob/main/umt5-xxl-enc-bf16.safetensors"
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors"
 )
 
 UNET_MODELS=(
-  "https://huggingface.co/bullerwins/Wan2.2-T2V-A14B-GGUF/resolve/main/wan2.2_t2v_high_noise_14B_Q8_0.gguf"
-  "https://huggingface.co/bullerwins/Wan2.2-T2V-A14B-GGUF/resolve/main/wan2.2_t2v_low_noise_14B_Q8_0.gguf"
+ # "https://huggingface.co/bullerwins/Wan2.2-T2V-A14B-GGUF/resolve/main/wan2.2_t2v_high_noise_14B_Q8_0.gguf"
+ # "https://huggingface.co/bullerwins/Wan2.2-T2V-A14B-GGUF/resolve/main/wan2.2_t2v_low_noise_14B_Q8_0.gguf"
 )
 
 LORA_MODELS=(
-  "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors"
-  "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors"
+ # "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank128_bf16.safetensors"
+  #"https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors"
   "https://civitai.com/api/download/models/2115311?type=Model&format=Diffusers" # instagirl
   "https://civitai.com/api/download/models/2124694?type=Model&format=Diffusers" # instareal
 )
 
 VAE_MODELS=(
+    "https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/vae/wan_2.1_vae.safetensors"
 )
 
 ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
+)
+DIFFUSION_MODELS=(
+    "https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/I2V/Wan2_2-I2V-A14B-HIGH_fp8_e5m2_scaled_KJ.safetensors"
+    "https://huggingface.co/Kijai/WanVideo_comfy_fp8_scaled/resolve/main/I2V/Wan2_2-I2V-A14B-LOW_fp8_e5m2_scaled_KJ.safetensors"
 )
 
 ### DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING ###
@@ -82,6 +94,9 @@ function provisioning_start() {
     provisioning_get_files \
         "${COMFYUI_DIR}/input" \
         "${INPUT[@]}"
+    provisioning_get_files \
+        "${COMFYUI_DIR}/models/diffusion" \
+        "${DIFFUSION_MODELS[@]}"
     provisioning_get_files \
         "${COMFYUI_DIR}/models/checkpoints" \
         "${CHECKPOINT_MODELS[@]}"
