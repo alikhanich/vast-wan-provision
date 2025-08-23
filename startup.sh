@@ -63,6 +63,7 @@ LORA_MODELS=(
   #"https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Lightx2v/lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors"
   "https://civitai.com/api/download/models/2115311?type=Model&format=Diffusers" # instagirl
   "https://civitai.com/api/download/models/2124694?type=Model&format=Diffusers" # instareal
+  "https://civitai.com/api/download/models/2121297?type=Model&format=Diffusers" # oral
 )
 
 VAE_MODELS=(
